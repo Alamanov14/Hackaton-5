@@ -39,142 +39,144 @@
     <!-- adaptive -->
   </head>
   <body>
-    <!-- navbar start -->
-    <nav class="navbar bg-light mx-5">
-      <div class="container-fluid">
-        <h2 class="ms-5">ЭЛИТА</h2>
+    <div class="container">
+      <!-- navbar start -->
+      <nav class="navbar">
+        <div class="container-fluid">
+          <button class="change-white w-25 form-control">Сменить тему</button>
+          <h2 class="title">ЭЛИТА</h2>
 
-        <button class="change-white">Сменить тему</button>
-        <form class="d-flex" role="search" id="form-nav">
+          <form class="d-flex" role="search" id="form-nav">
+            <input
+              id="search-nav"
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+          </form>
+        </div>
+      </nav>
+      <!-- navbar end -->
+      <!-- product start -->
+      <div class="product-block">
+        <div id="wrapper">
           <input
-            id="search-nav"
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
+            type="text"
+            placeholder="Добавьте название блюда"
+            class="form-control product-name"
           />
-        </form>
+          <input
+            type="text"
+            placeholder="Добавьте название категории"
+            class="form-control product-category"
+          />
+          <input
+            type="text"
+            placeholder="Добавьте описание блюда"
+            class="form-control product-from"
+          />
+          <input
+            type="text"
+            placeholder="Добавьте цену блюда"
+            class="form-control product-price"
+          />
+          <input
+            type="text"
+            placeholder="Добавьте ссылку на картину блюда"
+            class="form-control product-photo"
+          />
+        </div>
+        <button class="btn btn-dark w-50 bnt-add">Добавить продукт</button>
       </div>
-    </nav>
-    <!-- navbar end -->
-    <!-- product start -->
-    <div class="product-block">
-      <div id="wrapper">
-        <input
-          type="text"
-          placeholder="Добавьте название блюда"
-          class="form-control product-name"
-        />
-        <input
-          type="text"
-          placeholder="Добавьте название категории"
-          class="form-control product-category"
-        />
-        <input
-          type="text"
-          placeholder="Добавьте описание блюда"
-          class="form-control product-from"
-        />
-        <input
-          type="text"
-          placeholder="Добавьте цену блюда"
-          class="form-control product-price"
-        />
-        <input
-          type="text"
-          placeholder="Добавьте ссылку на картину блюда"
-          class="form-control product-photo"
-        />
-      </div>
-      <button class="btn btn-dark w-50 bnt-add">Добавить продукт</button>
-    </div>
 
-    <!-- product start -->
-    <div class="product-list"></div>
-    <!-- edit-modal start  -->
+      <!-- product start -->
+      <div class="product-list"></div>
+      <!-- edit-modal start  -->
 
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="staticBackdrop"
-      data-bs-backdrop="static"
-      data-bs-keyboard="false"
-      tabindex="-1"
-      aria-labelledby="staticBackdropLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">
-              Изменение блюдо
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <input
-              type="text"
-              placeholder="Добавьте название блюда"
-              class="form-control edit-name"
-            />
-            <input
-              type="text"
-              placeholder="Добавьте название категории"
-              class="form-control edit-category"
-            />
-            <input
-              type="text"
-              placeholder="Добавьте состав блюдо"
-              class="form-control edit-from"
-            />
-            <input
-              type="text"
-              placeholder="Добавьте цену блюдо"
-              class="form-control edit-price"
-            />
-            <input
-              type="text"
-              placeholder="Добавьте картину блюда"
-              class="form-control edit-photo"
-            />
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary edit-save">
-              Save
-            </button>
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                Изменение блюдо
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <input
+                type="text"
+                placeholder="Добавьте название блюда"
+                class="form-control edit-name"
+              />
+              <input
+                type="text"
+                placeholder="Добавьте название категории"
+                class="form-control edit-category"
+              />
+              <input
+                type="text"
+                placeholder="Добавьте состав блюдо"
+                class="form-control edit-from"
+              />
+              <input
+                type="text"
+                placeholder="Добавьте цену блюдо"
+                class="form-control edit-price"
+              />
+              <input
+                type="text"
+                placeholder="Добавьте картину блюда"
+                class="form-control edit-photo"
+              />
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary edit-save">
+                Save
+              </button>
+            </div>
           </div>
         </div>
       </div>
+      <!-- edit-modal end  -->
+      <!-- pagination start -->
+      <nav aria-label="Page navigation example">
+        <ul class="pagination d-flex justify-content-center">
+          <li class="page-item prev">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <div class="pagination-list d-flex"></div>
+          <li class="page-item next">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <!-- edit-modal end  -->
-    <!-- pagination start -->
-    <nav aria-label="Page navigation example">
-      <ul class="pagination d-flex justify-content-center">
-        <li class="page-item prev">
-          <a class="page-link" href="#" aria-label="Previous">
-            <span aria-hidden="true">&laquo;</span>
-          </a>
-        </li>
-        <div class="pagination-list d-flex"></div>
-        <li class="page-item next">
-          <a class="page-link" href="#" aria-label="Next">
-            <span aria-hidden="true">&raquo;</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
     <!-- pagination end -->
     <script src="./main.js"></script>
     <script
