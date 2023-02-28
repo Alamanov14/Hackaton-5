@@ -1,20 +1,61 @@
 body {
-  background-image: url(https://img1.akspic.ru/crops/3/7/0/5/15073/15073-frukty-celnyj_produkt-ovoshh-produkciya-vegetarianskaya_pishha-1920x1080.jpg);
+  background-image: url(./Продуктовый\ .png);
+  /* background-color: red; */
 }
 .product-block {
   width: 500px;
   margin: auto;
-  opacity: 0.3;
-  border: 2px solid black;
   text-align: center;
+  font-family: "Marck Script", cursive;
 }
 #wrapper {
+  opacity: 0.7;
   margin-bottom: 10%;
   margin-top: 10%;
-  border: 2px solid black;
 }
 .form-control {
   color: beige;
   margin-bottom: 5%;
   text-align: center;
+  font-size: large;
+}
+.form-control::placeholder {
+  color: black;
+  opacity: 1;
+  font-weight: 700;
+}
+.form-control:hover {
+  background-color: black;
+  color: white;
+}
+.form-control:hover::placeholder {
+  background-color: black;
+  color: white;
+}
+
+.btn-outline-success {
+  width: 25%;
+  height: 15%;
+}
+
+.navbar {
+  background-color: #839290;
+  background-image: linear-gradient(
+    160deg,
+    #839290 0%,
+    #1b1c1d 100%
+  ) !important;
+  border-radius: 20px;
+}
+.me-2 {
+  opacity: 0.6;
+  background: #322e1e0c; /* Цвет фона */
+  padding: 5px;
+  border: 1px solid black;
+}
+#form-nav {
+  align-items: center;
+}
+#search-nav {
+  margin: auto;
 }
