@@ -65,15 +65,6 @@
     <!-- product start -->
     <div class="product-list"></div>
     <!-- edit-modal start  -->
-    <!-- Button trigger modal -->
-    <button
-      type="button"
-      class="btn btn-primary"
-      data-bs-toggle="modal"
-      data-bs-target="#staticBackdrop"
-    >
-      Launch static backdrop modal
-    </button>
 
     <!-- Modal -->
     <div
@@ -98,7 +89,33 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">...</div>
+          <div class="modal-body">
+            <input
+              type="text"
+              placeholder="Добавьте название продукта"
+              class="form-control edit-name"
+            />
+            <input
+              type="text"
+              placeholder="Добавьте название категории"
+              class="form-control edit-category"
+            />
+            <input
+              type="text"
+              placeholder="Добавьте откуда привезён"
+              class="form-control edit-from"
+            />
+            <input
+              type="text"
+              placeholder="Добавьте цену продукта"
+              class="form-control edit-price"
+            />
+            <input
+              type="text"
+              placeholder="Добавьте картину продукта"
+              class="form-control edit-photo"
+            />
+          </div>
           <div class="modal-footer">
             <button
               type="button"
@@ -107,7 +124,9 @@
             >
               Close
             </button>
-            <button type="button" class="btn btn-primary">Save</button>
+            <button type="button" class="btn btn-primary edit-save">
+              Save
+            </button>
           </div>
         </div>
       </div>
