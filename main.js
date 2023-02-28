@@ -16,7 +16,7 @@ let editPrice = document.querySelector(".edit-price");
 let editSave = document.querySelector(".edit-save");
 let editModal = document.querySelector("#staticBackdrop");
 // search
-let search = document.querySelector(".search");
+let search = document.querySelector("#search-nav");
 let searchVal = "";
 // pagination
 let pagination = document.querySelector(".pagination-list");
@@ -60,7 +60,7 @@ btnAdd.addEventListener("click", async () => {
 });
 render();
 async function render() {
-  let res = await fetch(`${API}?p=${searchVal}&_page=${currentPage}&_limit=3`);
+  let res = await fetch(`${API}?q=${searchVal}&_page=${currentPage}&_limit=3`);
   let products = await res.json();
 
   productList.innerHTML = "";
@@ -73,11 +73,12 @@ async function render() {
     <h5 class="card-category">${item.category}</h5>
     <h5 class="card-from">${item.from}</h5>
     <h5 class="card-price">${item.price}</h5>
-    <button onclick='deleteProduct(${item.id})'data-bs-toggle="modal" data-bs-target="#staticBackdrop" class='btn-delete'>Delete</button>
+    <button onclick='deleteProduct(${item.id})'data-bs-toggle="modal" data-bs-target="" class='btn-delete'>Delete</button>
     <button onclick='openModal(${item.id})'data-bs-toggle="modal" data-bs-target="#staticBackdrop" class='btn-edit'>Edit</button>
   </div>
 </div>
     `;
+    paginationBtns();
   });
 }
 // delete
@@ -138,30 +139,40 @@ editSave.addEventListener("click", async (e) => {
 // search
 search.addEventListener("input", () => {
   searchVal = search.value;
+  console.log(searchVal);
   render();
 });
+
 // pagination
+
 function paginationBtns() {
-  fetch(`${API}/q?=${searchVal}`)
+  fetch(`${API}?p=${searchVal}`)
     .then((res) => res.json())
-    .then((date) => {
-      totalPage = Math.ceil(date.length / 3);
+    .then((data) => {
+      totalPage = Math.ceil(data.length / 3);
       pagination.innerHTML = "";
-      for (i = 1; i < totalPage; i++) {
+      for (let i = 1; i <= totalPage; i++) {
         if (currentPage == i) {
-          pagination.innerHTML = `
-            <li class="page-item active"><a class="page-link  page_number" href="#">${i}</a></li> 
+          pagination.innerHTML += `
+             <li class="page-item active"><a class="page-link  page_number" href="#">${i}</a></li> 
             `;
         } else {
-          pagination.innerHTML = `
-            <li class="page-item "><a class="page-link  page_number" href="#">${i}</a></li> 
+          pagination.innerHTML += `
+             <li class="page-item "><a class="page-link page_number" href="#">${i}</a></li> 
             `;
         }
       }
-      if (currentPage == 1) prev.classList.add("disable");
-      else prev.classList.remove("disable");
-      if (currentPage == totalPage) next.classList.add("disable");
-      else next.classList.remove("disable");
+      // give color grey prev/next buttons
+      if (currentPage == 1) {
+        prev.classList.add("disabled");
+      } else {
+        prev.classList.remove("disabled");
+      }
+      if (currentPage == totalPage) {
+        next.classList.add("disabled");
+      } else {
+        next.classList.remove("disabled");
+      }
     });
 }
 
@@ -174,4 +185,10 @@ next.addEventListener("click", () => {
   if (currentPage >= totalPage) return;
   currentPage++;
   render();
+});
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("page_number")) {
+    currentPage = e.target.innerText;
+    render();
+  }
 });
