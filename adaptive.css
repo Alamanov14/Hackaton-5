@@ -1,7 +1,24 @@
-@media all and (max-width: 425px) {
+@media all and (max-width: 426px) {
   #wrapper {
     width: 75%;
     margin: auto;
     margin-top: 11%;
+  }
+  .product-block {
+    margin: auto;
+    text-align: center;
+    font-family: "Marck Script", cursive;
+  }
+  .change-white {
+    width: 30%;
+    height: 40px;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+  }
+  #search-nav {
+    margin-top: 20px;
+    /* width: 50px;
+    height: 10px; */
   }
 }
