@@ -1,12 +1,28 @@
 {
   "products": [
     {
-      "name": "fbF",
-      "category": "bzdvxcb ",
-      "from": "cvb zfb ",
-      "price": "dfbdgznxb",
-      "photo": "https://cdn.pixabay.com/photo/2016/10/07/08/56/close-up-1721060_960_720.jpg",
+      "name": "Свекла с черной икрой  ",
+      "category": "первое блюда",
+      "from": "от фрацузского шефа",
+      "price": "5000сом",
+      "photo": "https://www.timeout.ru/imgapi/api/post?id=3936690&w=745&h=450&t=1571846598",
+      "id": 2
+    },
+    {
+      "name": "гриль",
+      "category": "второе блюдо",
+      "from": "Гриль — это специальная установка с решеткой для приготовления блюд на углях",
+      "price": "500сом",
+      "photo": "https://e3.edimdoma.ru/data/ingredients/0000/9257/9257-ed4_wide.jpg?1482763172",
       "id": 3
+    },
+    {
+      "name": "Гурьевская каша",
+      "category": "первое блюдо",
+      "from": "Гурьевская каша — традиционное блюдо русской кухни.",
+      "price": "500сом",
+      "photo": "https://e3.edimdoma.ru/data/ingredients/0000/9253/9253-ed4_small.jpg?1482763281",
+      "id": 4
     }
   ]
 }
