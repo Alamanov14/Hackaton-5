@@ -73,8 +73,8 @@ async function render() {
     <h5 class="card-category">${item.category}</h5>
     <h5 class="card-from">${item.from}</h5>
     <h5 class="card-price">${item.price}</h5>
-    <button onclick='deleteProduct(${item.id})'data-bs-toggle="modal" data-bs-target="" class='btn-delete'>Delete</button>
-    <button onclick='openModal(${item.id})'data-bs-toggle="modal" data-bs-target="#staticBackdrop" class='btn-edit'>Edit</button>
+    <button onclick='deleteProduct(${item.id})'data-bs-toggle="modal" data-bs-target="" class=' btn btn-delete'>Delete</button>
+    <button onclick='openModal(${item.id})'data-bs-toggle="modal" data-bs-target="#staticBackdrop" class='btn btn-edit'>Edit</button>
   </div>
 </div>
     `;
