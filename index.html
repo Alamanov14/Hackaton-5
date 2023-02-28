@@ -6,26 +6,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gloock&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google fon marck script -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google font -->
+    <!-- bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <!-- bootstrap -->
+
+    <!-- css -->
     <link rel="stylesheet" href="style.css" />
+    <!-- css -->
+    <!-- adaptive -->
+    <link rel="stylesheet" href="adaptive.css" />
+    <!-- adaptive -->
   </head>
   <body>
     <!-- navbar start -->
     <nav class="navbar bg-light mx-5">
       <div class="container-fluid">
-        <form class="d-flex" role="search">
+        <form class="d-flex" role="search" id="form-nav">
           <input
-            class="form-control me-2 search"
+
+            id="search-nav"
+            class="form-control me-2"
+
             type="search"
             placeholder="Search"
             aria-label="Search"
           />
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button class="btn btn-dark" type="submit">Search</button>
         </form>
       </div>
     </nav>
@@ -58,8 +85,8 @@
           placeholder="Добавьте картину продукта"
           class="form-control product-photo"
         />
-        <button class="btn btn-dark w-50 bnt-add">Add product</button>
       </div>
+      <button class="btn btn-dark w-50 bnt-add">Добавить продукт</button>
     </div>
 
     <!-- product start -->
