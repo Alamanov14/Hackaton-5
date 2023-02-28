@@ -1,3 +1,23 @@
 body {
   background-image: url(https://img1.akspic.ru/crops/3/7/0/5/15073/15073-frukty-celnyj_produkt-ovoshh-produkciya-vegetarianskaya_pishha-1920x1080.jpg);
 }
+.product-block {
+  width: 500px;
+  margin: auto;
+  opacity: 0.3;
+  border: 2px solid black;
+  text-align: center;
+}
+#wrapper {
+  margin-bottom: 10%;
+  margin-top: 10%;
+  border: 2px solid black;
+}
+.form-control {
+  color: beige;
+  margin-bottom: 5%;
+  text-align: center;
+}
+/* .form-control::placeholder{
+    color: ;
+} */
