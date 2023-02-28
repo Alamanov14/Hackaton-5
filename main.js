@@ -15,6 +15,15 @@ let editPhoto = document.querySelector(".edit-photo");
 let editPrice = document.querySelector(".edit-price");
 let editSave = document.querySelector(".edit-save");
 let editModal = document.querySelector("#staticBackdrop");
+// search
+let search = document.querySelector(".search");
+let searchVal = "";
+// pagination
+let pagination = document.querySelector(".pagination-list");
+let prev = document.querySelector(".prev");
+let next = document.querySelector(".next");
+let currentPage = 1;
+let totalPage = 1;
 
 let productList = document.querySelector(".product-list");
 btnAdd.addEventListener("click", async () => {
@@ -51,8 +60,9 @@ btnAdd.addEventListener("click", async () => {
 });
 render();
 async function render() {
-  let res = await fetch(`${API}`);
+  let res = await fetch(`${API}?p=${searchVal}&_page=${currentPage}&_limit=3`);
   let products = await res.json();
+
   productList.innerHTML = "";
   products.forEach((item) => {
     productList.innerHTML += `
@@ -82,11 +92,12 @@ async function deleteProduct(id) {
   }
 }
 // edit
-
+let editObj = {};
 async function openModal(id) {
   try {
     let res = await fetch(`${API}/${id}`);
     let objToEdit = await res.json();
+
     editName.value = objToEdit.name;
     editCat.value = objToEdit.category;
     editPrice.value = objToEdit.price;
@@ -98,19 +109,21 @@ async function openModal(id) {
   }
 }
 editSave.addEventListener("click", async (e) => {
-  let editObj = {
+  let id = e.target.id;
+  console.log(id);
+  editObj = {
     name: editName.value,
     category: editCat.value,
     photo: editPhoto.value,
     price: editPrice.value,
     from: editFrom.value,
   };
-  console.log(editObj.name);
+  console.log(editObj);
   try {
-    await fetch(`${API}/${e.target.id}`, {
+    await fetch(`${API}/${id}`, {
       method: "PATCH",
       headers: {
-        "Content-Type": "aplication/json; charset=utf-8",
+        "Content-Type": "application/json; charset=utf-8",
       },
       body: JSON.stringify(editObj),
     });
@@ -120,4 +133,45 @@ editSave.addEventListener("click", async (e) => {
   render();
   let modal = bootstrap.Modal.getInstance(editModal);
   modal.hide();
+});
+
+// search
+search.addEventListener("input", () => {
+  searchVal = search.value;
+  render();
+});
+// pagination
+function paginationBtns() {
+  fetch(`${API}/q?=${searchVal}`)
+    .then((res) => res.json())
+    .then((date) => {
+      totalPage = Math.ceil(date.length / 3);
+      pagination.innerHTML = "";
+      for (i = 1; i < totalPage; i++) {
+        if (currentPage == i) {
+          pagination.innerHTML = `
+            <li class="page-item active"><a class="page-link  page_number" href="#">${i}</a></li> 
+            `;
+        } else {
+          pagination.innerHTML = `
+            <li class="page-item "><a class="page-link  page_number" href="#">${i}</a></li> 
+            `;
+        }
+      }
+      if (currentPage == 1) prev.classList.add("disable");
+      else prev.classList.remove("disable");
+      if (currentPage == totalPage) next.classList.add("disable");
+      else next.classList.remove("disable");
+    });
+}
+
+prev.addEventListener("click", () => {
+  if (currentPage <= 1) return;
+  currentPage--;
+  render();
+});
+next.addEventListener("click", () => {
+  if (currentPage >= totalPage) return;
+  currentPage++;
+  render();
 });
