@@ -1,36 +1,28 @@
 {
   "products": [
     {
-      "name": "fbF",
-      "category": "bzdvxcb ",
-      "from": "cvb zfb ",
-      "price": "dfbdgznxb",
+      "name": "svzdfdbf",
+      "category": "zbzd",
+      "from": "vbzd",
+      "price": "1000",
       "photo": "https://cdn.pixabay.com/photo/2016/10/07/08/56/close-up-1721060_960_720.jpg",
-      "id": 3
+      "id": 1
     },
     {
-      "name": "dvbzdgn",
-      "category": "sgdn",
-      "from": "dsvbn",
-      "price": "sb",
+      "name": "hsfngf",
+      "category": "zbgnxf",
+      "from": "dzfb",
+      "price": "2500",
       "photo": "https://cdn.pixabay.com/photo/2016/10/07/08/56/close-up-1721060_960_720.jpg",
       "id": 4
     },
     {
-      "name": "sfdn",
-      "category": "sfbnfx",
-      "from": "thsr",
-      "price": "drhs",
+      "name": "vbnx",
+      "category": "bsg",
+      "from": "afgb",
+      "price": "2000",
       "photo": "https://cdn.pixabay.com/photo/2016/10/07/08/56/close-up-1721060_960_720.jpg",
       "id": 5
-    },
-    {
-      "name": "fvbdgh",
-      "category": "sfbn",
-      "from": "dsgbn",
-      "price": "fdg",
-      "photo": "sgh",
-      "id": 6
     }
   ]
 }

@@ -139,7 +139,6 @@ editSave.addEventListener("click", async (e) => {
 // search
 search.addEventListener("input", () => {
   searchVal = search.value;
-  console.log(searchVal);
   render();
 });
 
@@ -190,5 +189,10 @@ document.addEventListener("click", (e) => {
   if (e.target.classList.contains("page_number")) {
     currentPage = e.target.innerText;
     render();
+  }
+});
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("change-white")) {
+    document.body.classList.toggle("change-white");
   }
 });

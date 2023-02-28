@@ -1,6 +1,15 @@
+.change-white {
+  background-image: url(./вариант\ 3.jpg);
+  transition: 1s;
+}
 body {
   background-image: url(./2вариант.png);
-  /* background-color: red; */
+  transition: 1s;
+}
+
+.container-fluid {
+  display: flex;
+  flex-direction: column;
 }
 .product-block {
   width: 500px;
