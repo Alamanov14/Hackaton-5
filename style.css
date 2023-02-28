@@ -1,5 +1,5 @@
 body {
-  background-image: url(./Продуктовый\ .png);
+  background-image: url(./2вариант.png);
   /* background-color: red; */
 }
 .product-block {
@@ -14,7 +14,7 @@ body {
   margin-top: 10%;
 }
 .form-control {
-  color: beige;
+  color: black;
   margin-bottom: 5%;
   text-align: center;
   font-size: large;
@@ -43,7 +43,7 @@ body {
   background-image: linear-gradient(
     160deg,
     #839290 0%,
-    #1b1c1d 100%
+    #9d6936 100%
   ) !important;
   border-radius: 20px;
 }
@@ -58,4 +58,16 @@ body {
 }
 #search-nav {
   margin: auto;
+}
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  width: 18rem;
+  margin: 5%;
+}
+.card-img-top {
+  height: -webkit-fill-available;
 }

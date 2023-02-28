@@ -105,7 +105,6 @@ editSave.addEventListener("click", async (e) => {
     price: editPrice.value,
     from: editFrom.value,
   };
-  console.log(editObj.name);
   try {
     await fetch(`${API}/${e.target.id}`, {
       method: "PATCH",

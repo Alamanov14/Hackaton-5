@@ -7,6 +7,22 @@
       "price": "sfbn",
       "photo": "https://cdn.pixabay.com/photo/2016/10/07/08/56/close-up-1721060_960_720.jpg",
       "id": 1
+    },
+    {
+      "name": "menu",
+      "category": "doska",
+      "from": "derevo",
+      "price": "1800com",
+      "photo": "https://abrakadabra.fun/uploads/posts/2022-02/1644263538_20-abrakadabra-fun-p-fon-dlya-kafe-24.jpg",
+      "id": 2
+    },
+    {
+      "name": "fslkdjf",
+      "category": "lskdfjslkdsldkfjsl",
+      "from": "klsdjfjsdlk",
+      "price": "flksn",
+      "photo": "dskfnsdk",
+      "id": 3
     }
   ]
 }
